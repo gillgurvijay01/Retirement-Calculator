@@ -1,17 +1,11 @@
-var currentAge = prompt ('What is your current age?');
+var currentAge = prompt('How old are you now?');
+document.write('<div>You are '+currentAge+' years old.</div>');
 
-var retireAge = prompt ('At what age would you like to retire?');
+var retireAge = prompt('At what age do you want to retie?');
+document.write('<div>You want to be '+retireAge+' years old when you retire.</div>')
 
-var adjective = prompt ('Enter a adjective');
+var retirement = parseFloat(retireAge - currentAge);
+var retireYear = new Date().getFullYear() + retirement;
 
-var adverb = prompt ('Enter a adverb');
-
- 
-
-
-//console.log('Do you '+verb+' your '+adjective+' '+noun+' '+adverb+'? That\'s hilarious');
-
-document.write('Do you '+verb+' your '+adjective+' '+noun+' '+adverb+'? That\'s hilarious');
-//console.log('You will be '+nounFirst+' years old a year from now');
-
- 
+document.write('<div>You want to retire in '+retireYear+'.</div>');
+console.log('You want to retire in '+retireYear+' years.');
